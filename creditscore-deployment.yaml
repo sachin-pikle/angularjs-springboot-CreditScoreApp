@@ -21,7 +21,7 @@ spec:
         run: rest-creditscore
     spec:
       containers:
-      - image: wcr.io/sachin-pikle/rest-creditscore:latest
+      - image: wcr.io/sachin-pikle/test:latest
         imagePullPolicy: Always
         name: rest-creditscore
         ports:

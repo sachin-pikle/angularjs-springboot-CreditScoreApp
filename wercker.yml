@@ -10,8 +10,9 @@ push:
   steps:
     # Push to public docker repo Container Registry (CR)
     - internal/docker-push:
-        #tag: latest
-        tag: $WERCKER_GIT_BRANCH-$WERCKER_GIT_COMMIT,$WERCKER_GIT_COMMIT,latest
+        tag: latest
+        #tag: ${WERCKER_GIT_BRANCH}-$WERCKER_GIT_COMMIT
+        #tag: $WERCKER_GIT_BRANCH-$WERCKER_GIT_COMMIT,$WERCKER_GIT_COMMIT,latest
         repository: $CR_REPOSITORY
         cmd: java -jar  /pipeline/source/target/loan-0.1.0.war
 
